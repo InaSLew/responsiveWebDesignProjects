@@ -4,10 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Product Landing Page Using CSS Flexbox</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Gugi|Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Roboto Slab', serif;;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        
+        #header-img {
+            height: 10%;
+            width: 10%;
+        }
+        
+        #nav-bar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-link {
+            padding-left: 120px;
+            padding-right: 120px;
+            font-family: 'Gugi', cursive;
+            color: lightgrey;
+        }
+
+        .nav-link:hover {
+            background-color: darkgrey;
+        }
+        
+        #header {
+            background-color: darkslategray;
+            color: lightgray;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Gugi', cursive;
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+        }
+
+        #logo {
+            font-size: 3em;
+        }
+        
+        #feature {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        #sign-up {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 200px;
+        }
+        
+        .card {
+            background-color: lightgrey;
+            width: auto;
+            height: 100px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .icons {
+            padding-right: 100px;
+            padding-left: 50px;
+        }
+
+        #how-to {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        #footer {
+            background-color: crimson;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="container">
+        <header id="header">
+            <img src="https://cdn4.iconfinder.com/data/icons/digital-design-colors-set-1/91/Digital__Design_57-512.png" alt="A box icon" id="header-img"><span id="logo">Cat Box</span>
+            <nav id="nav-bar">
+                <a href="#feature" class="nav-link">Feature</a>
+                <a href="#how-to" class="nav-link">How to use</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+            </nav>
+        </header>
+        <section id="sign-up">
+            <h3>A box for your cat! Sign up for the news letter</h3>
+            <small>...and storing things as well ofc</small>
+            <br />
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </section>
+        <section id="feature">
+            <div class="card">
+                <span><i class="icons fas fa-box fa-5x"></i></span>
+                <span>A sturdy box. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, laboriosam! Eum cum veniam ex minus totam aut asperiores quidem necessitatibus, natus labore consectetur vero praesentium recusandae, amet voluptate dolorem at.</span>
+            </div>
+            <div class="card">
+                <span><i class="icons fas fa-boxes fa-5x"></i></span>
+                <span>Easy to stack. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum corporis quae magnam sapiente nisi saepe accusamus numquam ea excepturi voluptas distinctio id, voluptate laborum consectetur. Mollitia ea fuga at ex.</span>
+            </div>
+            <div class="card">
+                <div><i class="icons fas fa-cat fa-5x"></i></div>
+                <div>Loved by your cat! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, laboriosam! Eum cum veniam ex minus totam aut asperiores quidem necessitatibus, natus labore consectetur vero praesentium recusandae, amet voluptate dolorem at.</div>
+            </div>
+        </section>
+        <section id="how-to">
+            <h3>Cat Box in action</h3>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/hqfHw8kFLng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section id="pricing">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit maxime doloremque ratione voluptates ducimus libero, est dolores ea odio modi! Provident asperiores sint architecto dolor velit veniam quisquam numquam? Tempore.
+        </section>
+        <footer id="footer">Footer</footer>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>

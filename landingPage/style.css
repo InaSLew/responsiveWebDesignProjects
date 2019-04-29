@@ -1,0 +1,41 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    font-family: monospace;
+}
+
+#header-img {
+    height: 3%;
+    width: 3%;
+}
+
+#nav-bar {
+    background-color: coral;
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: space-between;
+}
+
+#header {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#sec1 {
+    background-color: aqua;
+}
+
+#sec2 {
+    background-color: darkmagenta
+}
+
+#sec3 {
+    background-color: green
+}
+
+#footer {
+    background-color: crimson;
+}
